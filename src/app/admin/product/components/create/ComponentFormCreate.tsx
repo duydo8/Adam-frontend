@@ -341,7 +341,7 @@ const ComponentFormCreate = (props: Props) => {
                   {categories
                     .filter(
                       (e) =>
-                        e.isActive === true &&
+                        e?.status == 1 &&
                         e?.categoryChildren &&
                         e?.categoryChildren?.length > 0
                     )
@@ -369,7 +369,7 @@ const ComponentFormCreate = (props: Props) => {
                       Chưa chọn
                     </option>
                     {categoriesChil
-                      .filter((e) => e.isActive === true)
+                      .filter((e) => e.status === 1)
                       .map((option) => (
                         <option key={option.id} value={option.id}>
                           {option.categoryName}

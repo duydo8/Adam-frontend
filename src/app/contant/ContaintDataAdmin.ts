@@ -129,65 +129,10 @@ export const headCellsCategory: HeadCell<CategoryAdmin>[] = [
     label: "Tên danh mục",
   },
 
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
-export const LIST_CATEGORY: CategoryAdmin[] = [
-  {
-    id: 1,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 2,
-    create_date: "12/20/2022",
-    categoryName: "Đồng hồ",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 3,
-    create_date: "12/20/2022",
-    categoryName: "Hạ chí",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 4,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 5,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: true,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 6,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-];
+
 
 export const headCellsVoucher: HeadCell<VoucherAdmin>[] = [
   {

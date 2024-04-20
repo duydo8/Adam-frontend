@@ -38,12 +38,11 @@ export interface DataState<T> {
 export interface CategoryAdmin {
   id: number;
   categoryName: string;
-  create_date: string;
-  isDeleted: boolean;
+  createDate: string;
+  status: number;
   url: string;
   categoryParentId: number;
-  categoryChildren?: CategoryAdmin[] | null;
-  isActive: boolean;
+  categoryChildren: CategoryAdmin[];
 }
 
 export interface VoucherAdmin {
