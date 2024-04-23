@@ -12,7 +12,7 @@ import { ApiClient } from "../../service/ApiService";
     eventName?: string,
     id?: number,
     image?: string,
-    isActive?: boolean
+    status?: number
   }
   
   // function
@@ -42,7 +42,7 @@ export const requestPostCreateEvent = (payload: CreateDto) =>
   export interface UpdateDiscountDto{
     discountName?: string,
     id?: number,
-    isActive?: boolean,
+    status?: number,
     orderMaxRange?: number,
     orderMinRange?: number,
     salePrice?: number

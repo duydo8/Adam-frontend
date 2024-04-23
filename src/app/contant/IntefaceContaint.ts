@@ -19,13 +19,12 @@ export interface UserAdmin {
   fullName: string;
   priority: number;
   id: number;
-  isActive: boolean;
+  status: number;
   email: string;
   username: string;
   password: string;
   role: number;
   phoneNumber: string;
-  isDelete: number;
 }
 
 export interface DataState<T> {
@@ -52,8 +51,7 @@ export interface VoucherAdmin {
   endTime: string
   eventName: string
   image: string
-  isActive: boolean
-  isDelete: boolean
+  status: number
   startTime: string
   type: boolean
   salePrice: number
@@ -78,14 +76,12 @@ export interface AddressOrderInterface {
 export interface Material {
   id: any;
   materialName: string;
-  isDelete: boolean;
-  isActive: boolean;
+  status: number;
 }
 export interface Tag {
   id: any;
   tagName: string;
-  isDelete: boolean;
-  isActive: boolean;
+  status: number;
 }
 export interface Branch {
   id: any;
@@ -96,14 +92,12 @@ export interface Branch {
 export interface OptionColor {
   id: any;
   colorName: string;
-  isActive: boolean;
-  isDelete: boolean;
+  status: number;
 }
 export interface OptionSize {
   id: any;
   sizeName: string;
-  isActive: boolean;
-  isDelete: boolean;
+  status: number;
 }
 
 export interface DataStateOption {
@@ -125,11 +119,10 @@ export interface ProductAdmin {
   image: string;
   category_id: any;
   id: any;
-  isActive: any;
+  status: number;
   tag_id: any;
   voteAverage: number;
   category: CategoryAdmin;
-  isComplete: boolean;
   productImage: any;
   minPrice: number;
   maxPrice: number;
@@ -140,12 +133,11 @@ export interface DetailProductAdmin {
   quantity: number;
   priceExport: number;
   priceImport: number;
-  isDelete: any;
+  status: number;
   productImage: any;
   product: ProductAdmin;
   color: OptionColor;
   size: OptionSize;
-  isActive: boolean | null;
   createDate: string;
   productName?: string;
 }
@@ -154,7 +146,7 @@ export interface DetailOrderAdmin {
   id: number;
   quantity: number;
   price: number;
-  isDelete: boolean;
+  status: number;
   order_id: number;
   detail_product_id: number;
 }

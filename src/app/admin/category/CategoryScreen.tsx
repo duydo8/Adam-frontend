@@ -294,7 +294,7 @@ export default function CategoryScreen() {
                             {row.categoryName}
                           </TableCell>
                           <TableCell align="right">
-                            {row.status ==1 ? 'Đã hoàn thành':'Chưa hoàn thành'}
+                            {row.status ? "Hoạt động" : "Không hoạt động"}
                           </TableCell>
                           <div style={{ padding: 10 }}>
                             <Accordion variant="elevation">

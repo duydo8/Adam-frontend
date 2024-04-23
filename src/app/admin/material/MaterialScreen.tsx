@@ -145,7 +145,7 @@ export default function MaterialScreen() {
   const handleUpdate = async (row: Material) => {
     const payload: UpdateDto = {
       ...row,
-      isActive: !row.isActive,
+      status: row.status,
     };
     try {
       dispatch(changeLoading(true));
@@ -294,13 +294,7 @@ export default function MaterialScreen() {
                         <TableCell align="right">{row.materialName}</TableCell>
 
                         <TableCell align="right">
-                          <Switch
-                            checked={row.isActive}
-                            onChange={() => handleUpdate(row)}
-                            name={labelId}
-                            inputProps={{ "aria-label": labelId }}
-                            color="primary"
-                          />
+                          {row.status ? "Hoạt động" : "Không hoạt động"}
                         </TableCell>
                         <TableCell align="right">
                           <Button

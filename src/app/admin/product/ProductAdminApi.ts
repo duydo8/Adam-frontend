@@ -18,7 +18,7 @@ export interface CreateDto {
 export interface UpdateListDetailProductDto {
   id: number;
   image: string;
-  isActive: boolean;
+  status: number;
   priceExport: number;
   priceImport: number;
   quantity: number;
@@ -78,12 +78,11 @@ export interface UpdateProductDto {
   description: string;
   id: number;
   image: string;
-  isActive: boolean;
+  status: number;
   materialProductIds: number[];
   productName: string;
   tagProductIds: number[];
   voteAverage: number;
-  isDelete: boolean;
 }
 
 // function product detail

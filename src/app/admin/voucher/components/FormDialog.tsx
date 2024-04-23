@@ -141,7 +141,7 @@ const FormDialog = (props: Props) => {
           eventName: title,
           id: anchorElData.item.id,
           image: urlImage ? urlImage : anchorElData.item.image,
-          isActive: anchorElData.item.isActive,
+          status: anchorElData.item.status,
         };
 
         const res: ResultApi<VoucherAdmin> = await requestPutUpdateEvent(
@@ -156,10 +156,10 @@ const FormDialog = (props: Props) => {
                 discountOrder && discountOrder.length > 0
                   ? discountOrder[0].id
                   : 0,
-              isActive:
+              status:
                 discountOrder && discountOrder.length > 0
-                  ? discountOrder[0].isActive
-                  : true,
+                  ? discountOrder[0].status
+                  : 0,
               orderMaxRange: discount_max,
               orderMinRange: discount_min,
               salePrice: discount_persent,

@@ -295,13 +295,7 @@ export default function TagScreen() {
                         <TableCell align="right">{row.tagName}</TableCell>
 
                         <TableCell align="right">
-                          <Switch
-                            checked={row.isActive}
-                            onChange={() => handleUpdate(row)}
-                            name={labelId}
-                            inputProps={{ "aria-label": labelId }}
-                            color="primary"
-                          />
+                          {row.status ? "Hoạt động" : "Không hoạt động"}
                         </TableCell>
                         <TableCell align="right">
                           <Button

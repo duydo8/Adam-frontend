@@ -215,10 +215,9 @@ const ComponentFormCreate = (props: Props) => {
           id: dataProduct.id,
           image: selectedFile ? urlImage : dataProduct.productImage,
           productName: product_name,
-          isActive: dataProduct.isActive,
+          status: dataProduct.status,
           materialProductIds: materialList,
           tagProductIds: tagsList,
-          isDelete: false,
           voteAverage: dataProduct.voteAverage,
         };
 
@@ -403,7 +402,7 @@ const ComponentFormCreate = (props: Props) => {
                   MenuProps={MenuProps}
                 >
                   {tags
-                    .filter((e) => e.isActive === true)
+                    .filter((e) => e.status === 1)
                     .map((tag, index) => (
                       <MenuItem
                         key={index}
@@ -450,7 +449,7 @@ const ComponentFormCreate = (props: Props) => {
                   MenuProps={MenuProps}
                 >
                   {materials
-                    .filter((e) => e.isActive === true)
+                    .filter((e) => e.status === 1)
                     .map((material, index) => (
                       <MenuItem
                         key={index}

@@ -97,7 +97,7 @@ const FormDialog = (props: Props) => {
           email: email,
           fullName: fullname,
           id: anchorElData?.item?.id,
-          isActive: anchorElData?.item?.isActive,
+          status: anchorElData?.item?.status,
           password: password,
         };
         const res: ResultApi<UserAdmin> = await requestPutUpdateUser(payload);

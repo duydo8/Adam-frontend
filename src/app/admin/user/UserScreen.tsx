@@ -149,7 +149,7 @@ export default function UserScreen() {
   const handleUpdate = async (row: any) => {
     const payload: UpdateDto = {
       ...row,
-      isActive: !row.isActive,
+      status: !row.isActive? 1:0,
     };
     try {
       dispatch(changeLoading(true));
@@ -285,13 +285,7 @@ export default function UserScreen() {
                         </TableCell>
                         <TableCell align="right">{row.fullName}</TableCell>
                         <TableCell align="right">
-                          <Switch
-                            checked={row.isActive}
-                            onChange={() => handleUpdate(row)}
-                            name={labelId}
-                            inputProps={{ "aria-label": labelId }}
-                            color="primary"
-                          />
+                          {row.status ? "Hoạt động" : "Không hoạt động"}
                         </TableCell>
                         <TableCell align="right">
                           <Button

@@ -27,7 +27,7 @@ export interface ProductDetailByIdProduct {
 export const requestGetCategorylAll = () =>
   ApiClient.get("/category/findAll", {});
 export const requestGetCategorylAllByParentId = () =>
-  ApiClient.get("/category/findAllCategoryParentId", {});
+  ApiClient.get("/category/findAllCategoryParent", {});
 export const requestGetProductCustomer = (payload: FilterProductDto) =>
   ApiClient.post("/product/findByOpionalArrayValue", payload);
 

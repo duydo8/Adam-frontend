@@ -14,7 +14,7 @@ export interface CreateDto {
 
 // function
 export const requestGetCategoryAll = () =>
-  ApiClient.get("/admin/category/findAllCategoryParentId", {});
+  ApiClient.get("/admin/category/findAllCategoryParent", {});
 
 export const requestPutUpdateCategory = (payload: UpdateDto) =>
   ApiClient.put("/admin/category/update", payload);

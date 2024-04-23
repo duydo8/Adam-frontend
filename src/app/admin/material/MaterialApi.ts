@@ -2,9 +2,8 @@ import { ApiClient } from "../../service/ApiService";
 // interface
 export interface UpdateDto {
   id: number;
-  isActive: boolean;
   materialName: string;
-  isDelete: boolean;
+  status: number
 }
 
 export interface CreateDto {

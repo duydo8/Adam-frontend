@@ -94,7 +94,7 @@ const ListProductDetail = (props: Props) => {
         let res: UpdateListDetailProductDto = {
           id: e.id,
           image: e?.productImage ?? URL_IMAGE,
-          isActive: e.isActive ?? false,
+          status: e.status,
           priceExport: e.priceExport,
           priceImport: e.priceImport,
           quantity: e.quantity,
