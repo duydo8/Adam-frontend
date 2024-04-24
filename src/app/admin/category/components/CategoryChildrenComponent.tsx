@@ -311,7 +311,7 @@ export default function CategoryChildrenComponent(props: Props) {
                             {row.categoryName}
                           </TableCell>
                           <TableCell align="right">
-                            {row.status ? "Hoạt động" : "Không hoạt động"}
+                            {row.status == 1? "Hoạt động" : "Không hoạt động"}
                           </TableCell>
                           <TableCell align="right">
                             <Button

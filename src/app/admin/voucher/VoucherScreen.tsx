@@ -377,7 +377,7 @@ export default function VoucherScreen() {
                           {row.salePrice}
                         </TableCell>
                         <TableCell>
-                          {row.status ? "Hoạt động" : "Không hoạt động"}
+                          {row.status == 1? "Hoạt động" : "Không hoạt động"}
                         </TableCell>
                         <TableCell
                           align="right"

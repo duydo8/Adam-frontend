@@ -257,7 +257,7 @@ const DetailProductOrder = ({ product_id, handleClose, open }: Props) => {
                         </TableCell>
                         <TableCell align="right">
                           <p style={{ fontSize: 12, color: colors.gray59 }}>
-                            {row.status ? "Hoạt động" : "Không hoạt động"}
+                            {row.status == 1 ? "Hoạt động" : "Không hoạt động"}
                           </p>
                         </TableCell>
                         <TableCell align="right">

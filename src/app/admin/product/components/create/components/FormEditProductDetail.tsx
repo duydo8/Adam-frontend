@@ -117,7 +117,7 @@ const FormEditProductDetail = (props: Props) => {
         />
       </TableCell>
       <TableCell align="right">
-        {row.status ? "Hoạt động" : "Không hoạt động"}
+        {row.status == 1? "Hoạt động" : "Không hoạt động"}
          
       </TableCell>
     </TableRow>
