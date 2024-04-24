@@ -376,19 +376,8 @@ export default function VoucherScreen() {
                         >
                           {row.salePrice}
                         </TableCell>
-                        <TableCell
-                          align="right"
-                          style={{
-                            borderBottomColor: colors.white,
-                          }}
-                        >
-                          <Switch
-                            checked={row.isActive}
-                            onChange={() => handleUpdate(row)}
-                            name={labelId}
-                            inputProps={{ "aria-label": labelId }}
-                            color="primary"
-                          />
+                        <TableCell>
+                          {row.status == 1? "Hoạt động" : "Không hoạt động"}
                         </TableCell>
                         <TableCell
                           align="right"

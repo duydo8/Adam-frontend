@@ -66,9 +66,8 @@ const FormDialog = (props: Props) => {
         const item: UpdateDto = {
           id: anchorElData.item.id,
           categoryName: name,
-          isDelete: anchorElData.item.isDeleted ?? false,
+          status: anchorElData.item.status,
           categoryParentId: isParent ? 0 : Number(category),
-          isActive: anchorElData.item.isActive,
         };
         const res: ResultApi<CategoryAdmin> = await requestPutUpdateCategory(
           item

@@ -3,9 +3,8 @@ import { ApiClient } from "../../service/ApiService";
 // interface color
 export interface UpdateColorDto {
   id: number;
-  isDelete: boolean;
   colorName: string;
-  isActive: boolean;
+  status: number;
 }
 
 export interface CreateColorDto {

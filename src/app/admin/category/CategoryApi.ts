@@ -2,10 +2,9 @@ import { ApiClient } from "../../service/ApiService";
 // interface
 export interface UpdateDto {
   id: number;
-  isDelete: boolean;
   categoryName: string;
+  status: number;
   categoryParentId: number | null;
-  isActive: boolean;
 }
 
 export interface CreateDto {
@@ -15,7 +14,7 @@ export interface CreateDto {
 
 // function
 export const requestGetCategoryAll = () =>
-  ApiClient.get("/admin/category/findAllCategoryParentId", {});
+  ApiClient.get("/admin/category/findAllCategoryParent", {});
 
 export const requestPutUpdateCategory = (payload: UpdateDto) =>
   ApiClient.put("/admin/category/update", payload);

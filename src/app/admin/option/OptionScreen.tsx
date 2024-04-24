@@ -277,7 +277,7 @@ export default function OptionScreen() {
       dispatch(changeLoading(true));
       const payload: UpdateColorDto = {
         ...row,
-        isActive: !row.isActive,
+        status: row.status,
       };
       const res: ResultApi<OptionColor> = await requestPutUpdateColor(payload);
       dispatch(updateColor({ item: res.data }));
@@ -293,7 +293,7 @@ export default function OptionScreen() {
       dispatch(changeLoading(true));
       const payload: OptionSize = {
         ...row,
-        isActive: !row.isActive,
+        status: row.status,
       };
       const res: ResultApi<OptionSize> = await requestPutUpdateSize(payload);
       dispatch(updateSize({ item: res.data }));
@@ -314,7 +314,7 @@ export default function OptionScreen() {
       onClose={handleMenuCloseSize}
     >
       <MenuItem
-        onClick={() => handleDeleteSize([anchorElDataColor?.item.id ?? 0])}
+        onClick={() => handleDeleteSize([anchorElDataSize?.item.id ?? 0])}
         button
       >
         <Tooltip title="Delete">
@@ -501,13 +501,7 @@ export default function OptionScreen() {
                                 </TableCell>
 
                                 <TableCell align="right">
-                                  <Switch
-                                    checked={row.isActive}
-                                    onChange={() => handleUpdateColor({ row })}
-                                    name={labelId}
-                                    inputProps={{ "aria-label": labelId }}
-                                    color="primary"
-                                  />
+                                  {row.status == 1 ? "Hoạt động" : "Không hoạt động"}
                                 </TableCell>
                                 <TableCell align="right">
                                   <Button
@@ -677,13 +671,7 @@ export default function OptionScreen() {
                                 </TableCell>
 
                                 <TableCell align="right">
-                                  <Switch
-                                    checked={row.isActive}
-                                    onChange={() => handleUpdateSize({ row })}
-                                    name={labelId}
-                                    inputProps={{ "aria-label": labelId }}
-                                    color="primary"
-                                  />
+                                  {row.status == 1 ? "Hoạt động" : "Không hoạt động"}
                                 </TableCell>
                                 <TableCell align="right">
                                   <Button

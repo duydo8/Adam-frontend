@@ -4,7 +4,7 @@ export interface UpdateDto {
   email?: string,
   fullName?: string,
   id?: number,
-  isActive?: boolean,
+  status?: number,
   password?: string,
 }
 

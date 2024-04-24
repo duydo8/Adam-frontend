@@ -112,7 +112,7 @@ export const headCells: HeadCell<UserAdmin>[] = [
     disablePadding: false,
     label: "Tên đầy đủ",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
 export const headCellsCategory: HeadCell<CategoryAdmin>[] = [
@@ -129,65 +129,10 @@ export const headCellsCategory: HeadCell<CategoryAdmin>[] = [
     label: "Tên danh mục",
   },
 
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
-export const LIST_CATEGORY: CategoryAdmin[] = [
-  {
-    id: 1,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 2,
-    create_date: "12/20/2022",
-    categoryName: "Đồng hồ",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 3,
-    create_date: "12/20/2022",
-    categoryName: "Hạ chí",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 4,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 5,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: true,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-  {
-    id: 6,
-    create_date: "12/20/2022",
-    categoryName: "Thu đông",
-    isDeleted: false,
-    url: R.images.img_product,
-    categoryParentId: 0,
-    isActive: true,
-  },
-];
+
 
 export const headCellsVoucher: HeadCell<VoucherAdmin>[] = [
   {
@@ -227,7 +172,7 @@ export const headCellsVoucher: HeadCell<VoucherAdmin>[] = [
     disablePadding: false,
     label: "Giảm (% hoặc VND)",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
 export const LIST_VOUCHER: VoucherAdmin[] = [
@@ -246,7 +191,7 @@ export const headCellsMaterial: HeadCell<Material>[] = [
     disablePadding: false,
     label: "Tên chất liệu",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
 export const LIST_MATERIAL: Material[] = [];
@@ -339,21 +284,21 @@ export const headCellsTag: HeadCell<Tag>[] = [
     disablePadding: false,
     label: "Tên thẻ",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
 export const OPTIONS_DATA: DataStateOption = {
   colors: [
-    { id: 1, colorName: "Xanh", isActive: false, isDelete: false },
-    { id: 2, colorName: "Đỏ", isActive: false, isDelete: false },
-    { id: 3, colorName: "Vàng", isActive: false, isDelete: false },
+    { id: 1, colorName: "Xanh", status: 1 },
+    { id: 2, colorName: "Đỏ", status: 1 },
+    { id: 3, colorName: "Vàng", status: 1 },
   ],
   sizes: [
-    { id: false, sizeName: "S", isActive: false, isDelete: false },
-    { id: 2, sizeName: "M", isActive: false, isDelete: false },
-    { id: 3, sizeName: "L", isActive: false, isDelete: false },
-    { id: 4, sizeName: "XL", isActive: false, isDelete: false },
-    { id: 5, sizeName: "XXL", isActive: false, isDelete: false },
+    { id: false, sizeName: "S", status: 1 },
+    { id: 2, sizeName: "M", status: 1 },
+    { id: 3, sizeName: "L", status: 1 },
+    { id: 4, sizeName: "XL", status: 1 },
+    { id: 5, sizeName: "XXL", status: 1},
   ],
 };
 
@@ -385,7 +330,7 @@ export const headCellsOptionColor: HeadCell<OptionColor>[] = [
     disablePadding: false,
     label: "Tên màu",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 
 export const headCellsOptionSize: HeadCell<OptionSize>[] = [
@@ -401,7 +346,7 @@ export const headCellsOptionSize: HeadCell<OptionSize>[] = [
     disablePadding: false,
     label: "Tên kích thước",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
 ];
 // Product
 export const headCellsProduct: HeadCell<ProductAdmin>[] = [
@@ -423,50 +368,9 @@ export const headCellsProduct: HeadCell<ProductAdmin>[] = [
     disablePadding: false,
     label: "Ngày tạo",
   },
-  { id: "isActive", numeric: true, disablePadding: false, label: "Trạng thái" },
-  {
-    id: "isComplete",
-    numeric: true,
-    disablePadding: false,
-    label: "Trạng thái hoàn thành",
-  },
-];
-
-export const LIST_PRODUCT: ProductAdmin[] = [
-  // {
-  //   productName: "Áo",
-  //   category_id: 1,
-  //   description: "cu",
-  //   image: R.images.img_product,
-  //   id: 1,
-  //   createDate: "15/10/2021",
-  //   isActive: 0,
-  //   tag_id: 1,
-  //   voteAverage: 0,
-  // },
-  // {
-  //   productName: "Áo sơ mi",
-  //   category_id: 1,
-  //   description: "cu",
-  //   image: R.images.img_product,
-  //   id: 2,
-  //   createDate: "15/10/2021",
-  //   isActive: 0,
-  //   tag_id: 1,
-  //   voteAverage: 0,
-  // },
-  // {
-  //   productName: "Áo gió",
-  //   category_id: 1,
-  //   description: "cu",
-  //   image: R.images.img_product,
-  //   id: 3,
-  //   createDate: "15/10/2021",
-  //   isActive: 0,
-  //   tag_id: 1,
-  //   voteAverage: 0,
-  // },
-];
+  { id: "status", numeric: true, disablePadding: false, label: "Trạng thái" },
+]
+export const LIST_PRODUCT_DETAIL: DetailProductAdmin[] = [];
 
 export const headCellsProductDetail: HeadCell<DetailProductAdmin>[] = [
   {
@@ -474,101 +378,6 @@ export const headCellsProductDetail: HeadCell<DetailProductAdmin>[] = [
     numeric: false,
     disablePadding: true,
     label: "STT",
-  },
-];
-
-export const LIST_PRODUCT_DETAIL: DetailProductAdmin[] = [
-  {
-    id: 1,
-    color: {
-      id: 1,
-      isActive: true,
-      isDelete: false,
-      colorName: "Xanh",
-    },
-    createDate: "",
-    isActive: true,
-    isDelete: false,
-    product: LIST_PRODUCT[0],
-    priceExport: 15000,
-    priceImport: 10000,
-    productImage: "",
-    quantity: 10,
-    size: {
-      id: 1,
-      isActive: true,
-      isDelete: false,
-      sizeName: "S",
-    },
-  },
-  {
-    id: 2,
-    color: {
-      id: 2,
-      isActive: true,
-      isDelete: false,
-      colorName: "Vang",
-    },
-    createDate: "",
-    isActive: true,
-    isDelete: false,
-    product: LIST_PRODUCT[0],
-    priceExport: 1111111111,
-    priceImport: 10000,
-    productImage: "",
-    quantity: 10,
-    size: {
-      id: 2,
-      isActive: true,
-      isDelete: false,
-      sizeName: "M",
-    },
-  },
-  {
-    id: 3,
-    color: {
-      id: 1,
-      isActive: true,
-      isDelete: false,
-      colorName: "Xanh",
-    },
-    createDate: "",
-    isActive: true,
-    isDelete: false,
-    product: LIST_PRODUCT[0],
-    priceExport: 222222222,
-    priceImport: 10000,
-    productImage: "",
-    quantity: 10,
-    size: {
-      id: 2,
-      isActive: true,
-      isDelete: false,
-      sizeName: "M",
-    },
-  },
-  {
-    id: 4,
-    color: {
-      id: 2,
-      isActive: true,
-      isDelete: false,
-      colorName: "Vang",
-    },
-    createDate: "",
-    isActive: true,
-    isDelete: false,
-    product: LIST_PRODUCT[0],
-    priceExport: 3333333,
-    priceImport: 10000,
-    productImage: "",
-    quantity: 10,
-    size: {
-      id: 1,
-      isActive: true,
-      isDelete: false,
-      sizeName: "S",
-    },
   },
 ];
 

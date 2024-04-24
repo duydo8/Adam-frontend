@@ -28,8 +28,7 @@ import EnhancedTableToolbar from "../../component/EnhancedTableToolbar";
 import EnhancedTableToolbarHeder from "../../component/EnhancedTableToolbarHeder";
 import LoadingProgress from "../../component/LoadingProccess";
 import {
-  headCellsCategory,
-  LIST_CATEGORY,
+  headCellsCategory
 } from "../../contant/ContaintDataAdmin";
 import { TYPE_DIALOG } from "../../contant/Contant";
 import { CategoryAdmin, ResultApi } from "../../contant/IntefaceContaint";
@@ -147,20 +146,7 @@ export default function CategoryScreen() {
     setAnchorEl(event.currentTarget);
     setAnchorElData({ item: item });
   };
-  const handleChangeStatus = async (params: { row: CategoryAdmin }) => {
-    const { row } = params;
-    const item: UpdateDto = {
-      id: row.id,
-      categoryName: row.categoryName,
-      isDelete: row.isDeleted,
-      categoryParentId: row.categoryParentId,
-      isActive: !row.isActive,
-    };
-    dispatch(changeLoading(true));
-    const res: ResultApi<CategoryAdmin> = await requestPutUpdateCategory(item);
-    dispatch(updateCategory({ item: res.data }));
-    dispatch(changeLoading(false));
-  };
+
 
   const handleDelete = async (array: number[]) => {
     try {
@@ -308,13 +294,7 @@ export default function CategoryScreen() {
                             {row.categoryName}
                           </TableCell>
                           <TableCell align="right">
-                            <Switch
-                              checked={row.isActive}
-                              onChange={() => handleChangeStatus({ row: row })}
-                              name={labelId}
-                              inputProps={{ "aria-label": labelId }}
-                              color="primary"
-                            />
+                            {row.status == 1? "Hoạt động" : "Không hoạt động"}
                           </TableCell>
                           <div style={{ padding: 10 }}>
                             <Accordion variant="elevation">
@@ -341,7 +321,7 @@ export default function CategoryScreen() {
                               </AccordionSummary>
                               <AccordionDetails>
                                 <CategoryChildrenComponent
-                                  data={row.categoryChildren ?? LIST_CATEGORY}
+                                  data={row.categoryChildren}
                                   category_parent_id={row.id}
                                 />
                               </AccordionDetails>

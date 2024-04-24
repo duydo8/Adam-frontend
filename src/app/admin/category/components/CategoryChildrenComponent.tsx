@@ -139,9 +139,8 @@ export default function CategoryChildrenComponent(props: Props) {
       const item: UpdateDto = {
         id: row.id,
         categoryName: row.categoryName,
-        isDelete: row.isDeleted,
+        status: row.status,
         categoryParentId: parentId,
-        isActive: !row.isActive,
       };
       dispatch(changeLoading(true));
       const res: ResultApi<CategoryAdmin> = await requestPutUpdateCategory(
@@ -312,15 +311,7 @@ export default function CategoryChildrenComponent(props: Props) {
                             {row.categoryName}
                           </TableCell>
                           <TableCell align="right">
-                            <Switch
-                              checked={row.isActive}
-                              onChange={() =>
-                                handleChangeStatus(row, category_parent_id)
-                              }
-                              name={labelId}
-                              inputProps={{ "aria-label": labelId }}
-                              color="primary"
-                            />
+                            {row.status == 1? "Hoạt động" : "Không hoạt động"}
                           </TableCell>
                           <TableCell align="right">
                             <Button

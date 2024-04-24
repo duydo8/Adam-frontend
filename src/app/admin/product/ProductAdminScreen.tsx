@@ -121,21 +121,6 @@ export default function ProductScreen() {
     setAnchorElData(null);
   };
 
-  const handleUpdate = async (row: ProductAdmin) => {
-    try {
-      dispatch(changeLoading(true));
-      const payload = {
-        is_active: row.isActive ? 0 : 1,
-        id: row.id,
-      };
-      await requestPutUpdateProductStatus(payload);
-      dispatch(updateProduct({ item: { ...row, isActive: !row.isActive } }));
-      dispatch(changeLoading(false));
-    } catch (e) {
-      dispatch(changeLoading(false));
-    }
-  };
-
   const handleDelete = async (array: number[]) => {
     try {
       dispatch(changeLoading(true));
@@ -332,25 +317,11 @@ export default function ProductScreen() {
                       <TableCell align="right">{row?.createDate}</TableCell>
 
                       <TableCell align="right">
-                        <Switch
-                          checked={row?.isActive}
-                          onChange={() => handleUpdate(row)}
-                          name={labelId}
-                          inputProps={{ "aria-label": labelId }}
-                          color="primary"
-                        />
+                      color={row?.status == 1 ? "primary" : "default"}
+                      {row?.status == 1 ?'Đang hoạt động': 'Chưa hoạt động'}
+                      
                       </TableCell>
-                      <TableCell align="right">
-                        <Chip
-                          label={`${
-                            row?.isComplete
-                              ? "Đã hoàn thành"
-                              : "Chưa hoàn thành"
-                          }`}
-                          style={{ margin: 2 }}
-                          color={row?.isComplete ? "primary" : "default"}
-                        />
-                      </TableCell>
+                      
                       <TableCell align="right">
                         <Button
                           onClick={(event) => {

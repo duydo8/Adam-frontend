@@ -8,7 +8,7 @@ const createNotification = (params: {
   const { message, title, type } = params;
   Store.addNotification({
     title: title ?? "Thông báo",
-    message: message ?? "--- no message --- ",
+    message: message ?? "--- success --- ",
     type: type ?? "success",
     insert: "top",
     container: "top-left",

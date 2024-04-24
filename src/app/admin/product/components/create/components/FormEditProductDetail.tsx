@@ -54,7 +54,7 @@ const FormEditProductDetail = (props: Props) => {
 
   const changeStatus = () => {
     const newRes = listProductDetail.map((e) => {
-      if (e.id === row.id) return { ...e, isActive: !e.isActive };
+      if (e.id === row.id) return { ...e, status: !e.status };
       else return e;
     });
     setListProductDetail(newRes);
@@ -117,13 +117,8 @@ const FormEditProductDetail = (props: Props) => {
         />
       </TableCell>
       <TableCell align="right">
-        <Switch
-          checked={row?.isActive ?? false}
-          onChange={changeStatus}
-          name={labelId}
-          inputProps={{ "aria-label": labelId }}
-          color="primary"
-        />
+        {row.status == 1? "Hoạt động" : "Không hoạt động"}
+         
       </TableCell>
     </TableRow>
   );
