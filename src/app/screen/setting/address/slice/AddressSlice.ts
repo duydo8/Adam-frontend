@@ -17,7 +17,6 @@ export interface DataAddress {
   provinceName?: string;
   addressDetail?: string;
   isDefault?: boolean;
-  isActive?: boolean;
   phoneNumber?: string;
   fullName?: string;
   id?: any;
@@ -25,6 +24,7 @@ export interface DataAddress {
   province?: Address;
   district?: Address;
   name?: string;
+  status?: number;
 }
 
 interface DataStateAddress extends DataState<DataAddress[]> {
