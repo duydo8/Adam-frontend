@@ -149,12 +149,12 @@ export default function UserScreen() {
   const handleUpdate = async (row: any) => {
     const payload: UpdateDto = {
       ...row,
-      status: !row.isActive? 1:0,
+      status: !row.status? 1:0,
     };
     try {
       dispatch(changeLoading(true));
       await requestPutUpdateUser(payload);
-      dispatch(updateUser({ item: {...row,isActive: !row.isActive} }));
+      dispatch(updateUser({ item: {...row,status: !row.status} }));
       dispatch(changeLoading(false));
     } catch (e) {
       dispatch(changeLoading(false));

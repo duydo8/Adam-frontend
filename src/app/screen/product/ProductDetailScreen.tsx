@@ -106,7 +106,7 @@ interface ProductById {
   id: number;
   productName: string;
   description: string;
-  isActive: boolean;
+  status: number;
   maxPrice: number;
   minPrice: number;
   options: {

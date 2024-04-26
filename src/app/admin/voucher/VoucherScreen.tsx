@@ -209,7 +209,7 @@ export default function VoucherScreen() {
   const handleUpdate = async (row: any) => {
     const payload: UpdateDto = {
       ...row,
-      isActive: !row.isActive,
+      status: !row.status,
     };
     try {
       dispatch(changeLoading(true));

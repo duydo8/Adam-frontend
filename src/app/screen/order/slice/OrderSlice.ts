@@ -10,7 +10,6 @@ import { ResultApi } from "./../../../contant/IntefaceContaint";
 export interface History {
   description: string;
   id: number;
-  isActive: boolean;
   status: number;
   totalPrice: any;
   updateTime: string;
@@ -35,12 +34,11 @@ export interface OrderDto {
   address: {
     id: number;
     addressDetail: string;
-    isDeleted: boolean;
     createDate: string;
     province: DataAddress;
     district: DataAddress;
     ward: DataAddress;
-    isActive: boolean;
+    status: number;
   };
   historyOrders: History[];
   detailOrders?: OrderDetailPayload[]

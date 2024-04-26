@@ -259,7 +259,7 @@ export interface ItemCart {
   product_id?: number;
   detailProduct: DetailProductAdmin;
   id: number;
-  isActive: boolean;
+  status: number;
 }
 export const LIST_CART: ItemCart[] = [];
 
