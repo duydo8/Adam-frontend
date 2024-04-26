@@ -2,9 +2,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export interface Image {
   id: number;
-  is_active: boolean;
   url: number;
   user_id: string;
+  status: number;
 }
 
 const initialState = {

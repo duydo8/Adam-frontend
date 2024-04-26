@@ -3,9 +3,8 @@ import { ApiClient } from "../../service/ApiService";
 // interface favorite
 export interface UpdateDto {
   id: number;
-  isDelete: boolean;
   favoriteName: string;
-  status: boolean;
+  status: number;
 }
 
 export interface CreateDto {

@@ -27,9 +27,8 @@ export const requestPostCreateColor = (payload: CreateColorDto) =>
 // interface size
 export interface UpdateSizeDto {
   id: number;
-  isDelete: boolean;
   sizeName: string;
-  status: boolean;
+  status: number;
 }
 
 export interface CreateSizeDto {

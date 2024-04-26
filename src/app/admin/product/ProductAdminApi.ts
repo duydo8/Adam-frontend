@@ -2,9 +2,8 @@ import { ApiClient } from "../../service/ApiService";
 // interface product detail
 export interface UpdateDto {
   id: number;
-  isDelete: boolean;
   tagName: string;
-  status: boolean;
+  status: number;
 }
 
 export interface CreateDto {
@@ -95,7 +94,7 @@ export const requestPutUpdateProduct = (payload: UpdateProductDto) =>
   ApiClient.put("/admin/product/update", payload);
 export const requestPutUpdateProductStatus = (payload: {
   id: number;
-  is_active: number;
+  status: number;
 }) => ApiClient.put("/admin/product/updateIsActive",  payload );
 
 export const requestDeleteProduct = (payload?: { listProductId: number[] }) =>
