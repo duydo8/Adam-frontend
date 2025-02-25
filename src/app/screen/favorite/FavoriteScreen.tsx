@@ -17,24 +17,22 @@ const FavoriteScreen = () => {
   const getData = async () => {
     try {
       await dispatch(getFavoritesInfo());
-    } catch (e) {}
+    } catch (e) { }
   };
   return (
     <div className={classname.container}>
-      {data.length > 0
-        ? data.map((value, idx) => {
-            return (
-              <ProductItemComponent
-                item={value}
-                key={idx}
-                width={"22%"}
-                image={value?.productImage ?? R.images.img_product}
-              />
-            );
-          })
-        : [0, 1, 2].map((e) => {
-            return <ProductSkeleton />;
-          })}
+      {data.length > 0 ? (
+        <div className={classname.container}>
+          {data.map((value, idx) => (
+            <ProductItemComponent
+              item={value}
+              key={idx}
+              width={"22%"}
+              image={value?.productImage ?? R.images.img_product}
+            />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };

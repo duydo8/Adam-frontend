@@ -29,6 +29,7 @@ interface Props {
   item: ProductAdmin;
   width?: number | string;
   image?: any;
+  style?: React.CSSProperties;
 }
 
 const ProductItemComponent = (props: Props) => {

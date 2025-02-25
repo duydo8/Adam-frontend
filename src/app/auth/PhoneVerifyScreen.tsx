@@ -86,7 +86,7 @@ const PhoneVerifyScreen = () => {
     try {
       setLoading(true);
       const resultCode: ResultApi<any> = await requestVerifyPhone({
-        phone: `+84${Number(data.phone)}`,
+        phone: `${data.phone}`,
       });
       createNotification({
         type: "success",

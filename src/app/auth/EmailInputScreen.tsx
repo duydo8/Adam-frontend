@@ -88,7 +88,7 @@ const EmailInputScreen = () => {
 
   const handleSubmit = async (data: LoginInterface) => {
     setLoading(true)
-    const res: ResultApi<any> = await requestSendPhone({phone_number: `+84${Number(data.phone)}`})
+    const res: ResultApi<any> = await requestSendPhone({phone_number: `${data.phone}`})
     createNotification({
       type:"success",
       message:"Số điện thoại đã đúng"

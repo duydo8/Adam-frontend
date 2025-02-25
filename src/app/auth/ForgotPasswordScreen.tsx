@@ -103,7 +103,7 @@ const ForgotPasswordScreen = () => {
       setLoading(true);
       const payload: ForgotPassword = {
         code: code,
-        phone_number: `+84${Number(phone)}`,
+        phone_number: `${phone}`,
         password: data.password,
         confirm: data.re_password,
       };

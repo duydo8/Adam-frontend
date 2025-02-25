@@ -356,4 +356,4 @@ export const DEFINE_TYPE_ACCOUNT = {
 };
 
 export const descriptionProduct =
-  "At the moment, we do not recommend using synchronous methods, since calling methods synchronously can have strong performance penalties and introduce threading-related bugs to your native modules. Additionally, please note that if you choose to use RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD, your app can no longer use the Google Chrome debugger. This is because synchronous methods require the JS VM to share memory with the app. For the Google Chrome debugger, React Native runs inside the JS VM in Google Chrome, and communicates asynchronously with the mobile devices via WebSockets.";
+  "Mang đến phong cách thời trang thanh lịch và hiện đại, sản phẩm là sự lựa chọn hoàn hảo cho những ai yêu thích sự thoải mái nhưng vẫn giữ được vẻ ngoài chỉn chu. Được làm từ chất liệu thoáng mát, sản phẩm mang lại cảm giác mềm mại, thoáng mát và thấm hút mồ hôi tốt, giúp bạn tự tin suốt cả ngày. Chất liệu: Polyester cao cấp, bền đẹp theo thời gian. Thiết kế: Ôm body/dáng suông/dễ phối đồ, phù hợp với nhiều phong cách. Hãy sở hữu ngay  sản phẩm này để khẳng định phong cách riêng của bạn!";
